@@ -1,0 +1,441 @@
+
+
+/* ------------------------ reset properties ----------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    font-family:cursive;
+    overflow-x: hidden;
+}
+h1{
+    color: #4B83B6;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* -------------------------- NAV ---------------------*/
+
+#icon-nav{
+    height: 50px;
+ }
+
+ /* -------------------------- HOME --------------------*/
+
+.home{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 320px;
+}
+.img-home{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+.sp-home{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    padding-top: 100px;
+    padding-left: 15px;
+    background-color: rgba(0, 128, 0, 0.4);
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 2px black;
+}
+#container-ciudades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.section-gral{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 20%;
+    height: 100%;
+
+   
+}
+.ciudades{
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+    border: 1px solid black;
+    box-shadow: 0 0 8px black;
+    transition: all 0.8s;
+}
+
+.ciudades:hover{
+    transform: scale(1.1);
+    transition: all 0.8s;
+}
+.mapa{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.parr-map{
+    width: 80%;
+}
+.img-mapa{
+    display: none;
+    
+}
+.img-mapa2{
+    width: 80%;
+    margin:  15px 0;
+}
+.tour{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 320px;
+    
+}
+.div-tours{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 10%;
+}
+.img-tours{
+    width: 302px;
+    height: 225px;
+    object-fit: cover;
+    box-shadow: 0 0 5px black;
+}
+.parr{
+    padding: 7px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* ------------------------- foooter ---------------------------*/
+
+.footer{
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px 10%;
+    background-color: beige;
+    
+}
+.list-footer{
+    padding: 7px 0;
+}
+.redes{
+    height: 80px;
+    padding: 15px 0;
+    transition: 0.8s all;
+}
+.redes:hover{
+    transform: scale(1.2);
+    transition: 0.8s all;
+ }
+.whatsapp{
+    transform: scale(1.3);
+}   
+
+
+
+/* ------------------------- MEDIA QUERY TABLET------------------------*/
+
+@media (min-width: 321px) and (max-width:780px){
+
+/* ------------------------- HOME -------------------------------*/
+    .home{
+    width: 780px;
+}
+
+
+/* ----------------------------- CIUDADES -------------------*/
+
+#container-ciudades{
+    
+    width: 780px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.section-gral{
+    display: grid;
+    grid-template-areas: 
+                        "title ."
+                        "ciu1 ciu2"
+                        "ciu3 ciu4"
+                        "ciu5 ciu6";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, 1fr);
+    width: 740px;
+    height: 100%;
+    gap: 30px;
+    padding: 50px;
+       
+}
+.ciudades{
+    width: 70%;
+    object-fit: cover;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+}
+.title-ciudades{
+    grid-area: title;
+}
+.biarritz{
+    grid-area: ciu1;
+}
+.saint-jean{
+    grid-area: ciu2;
+}
+.san-sebastian{
+    grid-area: ciu3;
+}
+.bayonne{
+    grid-area: ciu4;
+}
+.bilbao{
+    grid-area: ciu5;
+}
+.sj-pied-port{
+    grid-area: ciu6;
+}
+
+
+/*---------------------------------- MAPA -------------------*/
+.mapa{
+    width: 780px;
+   
+}
+.parr-map{
+    width: 80%;
+}
+.img-mapa{
+    display: block;
+    
+}
+.img-mapa2{
+    display: none;
+}
+/*----------------------------------TOURS---------------------*/
+.tour{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 780px;
+    margin-top: 50px;
+}
+.div-tours{
+    width: 40%;
+    margin: 5px 5%;
+
+}
+.enlace-tour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+}
+.img-tours{
+    width: 75%;
+   
+}
+.parr{
+    width: 75%;
+    height: 206px;
+}
+
+/*---------------------------- FOOTER---------------------*/
+.footer{
+    width: 780px;
+    justify-content: space-between;
+}
+.list-footer{
+    padding: 7px 0;
+}
+.btn{
+    display: flex;
+    gap: 45px;
+}
+.redes{
+    height: 80px;
+    padding: 15px 0;
+    transition: 0.8s all;
+}
+.redes:hover{
+    transform: scale(1.2);
+    transition: 0.8s all;
+ }
+.whatsapp{
+    transform: scale(1.3);
+}   
+}
+
+/*---------------------------MEDIA FULL HD --------------------*/
+
+@media (min-width: 781px) and (max-width:1920px){
+
+
+    /* -------------------------- HOME --------------------*/
+
+.home{
+    
+    height: 100vh;
+    width: 100%;
+}
+.img-home{
+    width: 100%;
+    object-fit: cover;
+}
+.sp-home{
+    width: 30%;
+    font-size: 25px;
+    
+}
+/* ----------------------------- CIUDADES -------------------*/
+
+#container-ciudades{
+    
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.section-gral{
+    display: grid;
+    grid-template-areas: 
+                        "title ."
+                        "ciu1 ciu2"
+                        "ciu3 ciu4"
+                        "ciu5 ciu6";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, 1fr);
+    width: 740px;
+    height: 100%;
+    gap:70px;
+    padding: 50px;
+          
+}
+.ciudades{
+    width: 70%;
+    object-fit: cover;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+}
+/*---------------------------------- MAPA -------------------*/
+.mapa{
+    width: 80%;
+    margin: 100px 10%;
+   
+}
+.parr-map{
+    width: 80%;
+    font-size: 25px;
+    padding-bottom: 50px;
+}
+.img-mapa{
+    display: block;
+    width: 70%;
+    object-fit: cover;
+    
+}
+.img-mapa2{
+    display: none;
+}
+/*----------------------------------TOURS---------------------*/
+.tour{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 170px 10%;
+
+}
+.div-tours{
+    width: 40%;
+    margin: 5px 5%;
+
+}
+.enlace-tour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+}
+.img-tours{
+    width: 60%;
+   
+}
+.parr{
+    width: 60%;
+    height: 206px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*---------------------------- FOOTER---------------------*/
+.footer{
+    width: 100%;
+    justify-content: space-between;
+}
+.list-footer{
+    padding: 7px 0;
+}
+.btn{
+    display: flex;
+    gap: 45px;
+}
+.container-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+
+}
+.redes{
+    height: 80px;
+    padding: 15px 0;
+    transition: 0.8s all;
+}
+.redes:hover{
+    transform: scale(1.2);
+    transition: 0.8s all;
+ }
+.whatsapp{
+    transform: scale(1.3);
+}   
+}

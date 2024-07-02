@@ -1,0 +1,616 @@
+/* ------------------------ reset properties ----------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    font-family:cursive;
+    overflow-x: hidden;
+    background-color: beige;
+}
+h1{
+    color: #4B83B6;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#icon-nav{
+    height: 50px;
+}
+
+
+/* --------------------------- MAIN -------------------*/
+
+/* -------------- CARDS CORTA DISTANCIA ---------------*/
+
+.card-container{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.h1-seccion-card{
+    padding: 15px;
+    text-align: center;
+}
+.icons-ref{
+    width: 100%;
+}
+.div-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 10px 5%;
+}
+.circle-1{
+    color: green;
+}
+.circle-2{
+    color: yellow;
+}
+.circle-3{
+    color: red;
+}
+.icons{
+    width: 18px;
+}
+.card-cd{
+    border: 1px solid rgb(0, 128, 0);
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0 0 5px green;
+    
+}
+#cort-dist, #med-dist{
+    width: 90%;
+    text-align: center;
+    padding: 15px 0;
+
+}
+.title-card{
+    font-size: 20px;
+    margin: 20px 5%;
+}
+.div-card{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 10%;
+}
+.icons-card{
+    display: flex;
+    gap: 5px;
+    margin: 5px auto;
+
+}
+.img-prin{
+    width: 90%;
+    margin: 15px 5%;
+}
+.dist{
+    width: 25px;
+    height: 25px;
+}
+.p-container{
+    margin: 7px 10%;
+}
+
+/*----------------------------CARD MEDIA DISTANCIA--------------*/
+
+.card-md{
+    border: 1px solid rgb(153, 153, 4);
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0 0 5px rgb(153, 153, 4);
+}
+
+/*----------------------------CARD LARGA DISTANCIA--------------*/
+
+
+.card-ld{
+    border: 1px solid red;
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0 0 5px red;
+}
+
+
+
+/*---------------------------- FOOTER --------------*/
+
+
+.footer{
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px 10%;
+    background-color: rgba(213, 213, 138, 0.663);
+        
+}
+.list-footer{
+    padding: 7px 0;
+}
+.redes{
+    height: 80px;
+    padding: 15px 0;
+}
+.whatsapp{
+    transform: scale(1.3);
+}   
+
+
+
+/*-----------------------------MEDIA TABLET -----------------------------*/
+
+/* --------------------------- MAIN -------------------*/
+
+/* -------------- CARDS CORTA DISTANCIA ---------------*/
+
+@media (min-width: 321px) and (max-width:780px){
+    .card-container{
+        width: 780px;
+        
+    }
+    .h1-seccion-card{
+        padding: 15px;
+        text-align: center;
+    }
+    .icons-ref{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+    .div-icons{
+        gap: 20px;
+        margin: 10px;
+    }
+    
+    .corta-distancia{
+        display: grid;
+        grid-template-areas: "title title title"
+                             "card1 card2 card3";
+
+    }
+    .title-cd{
+        grid-area: title;
+    }
+    .card1{
+        grid-area: card1;
+    }
+    .card2{
+        grid-area: card2;
+    }
+    .card3{
+        grid-area: card3;
+    }
+    #cort-dist, #med-dist{
+        width: 90%;
+        text-align: center;
+        padding: 15px 0;
+    
+    }
+    .img-prin{
+        height: 200px;
+        
+    }
+
+    /*-------------------MEDIA DISTANCIA -----------------*/
+    
+    .media-distancia{
+        width: 90%;
+        display: grid;
+        grid-template-areas: "title title"
+                             "card1 card4"
+                             "card3 card2";
+    }
+    .title-md{
+        grid-area: title;
+    }
+    .card1{
+        grid-area: card1;
+    }
+    .card2{
+        grid-area: card2;
+    }
+    .card3{
+        grid-area: card3;
+    }
+    .card4{
+        grid-area: card4;
+    }
+    #med-dist{
+        width: 90%;
+        text-align: center;
+        padding: 15px 0;
+    
+    }
+    .img-prin{
+        height: 200px;
+        
+    }
+    .p-container{
+        padding-top: 5px;
+    }
+    
+}
+
+/*-------------------------- LARGA DISTANCIA --------------------------*/
+
+.larga-distancia{
+    width: 90%;
+    display: grid;
+    grid-template-areas: "title title"
+                         "card1 card4"
+                         "card3 card2"
+                         "card5 .";
+}
+.title-ld{
+    grid-area: title;
+}
+.card1{
+    grid-area: card1;
+}
+.card2{
+    grid-area: card2;
+}
+.card3{
+    grid-area: card3;
+}
+.card4{
+    grid-area: card4;
+}
+.card5{
+    grid-area: card5;
+}
+#larga-dist{
+    width: 90%;
+        text-align: center;
+        padding: 15px 0;
+    
+    }
+    .img-prin{
+        height: 200px;
+        
+    }
+    .p-container{
+        padding-top: 5px;
+    
+}
+
+
+/*---------------------------- FOOTER---------------------*/
+.footer{
+    width: 780px;
+    justify-content: space-between;
+}
+.list-footer{
+    padding: 7px 0;
+}
+.btn{
+    display: flex;
+    gap: 45px;
+}
+.redes{
+    height: 80px;
+    padding: 15px 0;
+}
+.whatsapp{
+    transform: scale(1.3);
+    
+}   
+
+
+
+/*-------------------------INDEX CSS-------------------*/
+
+
+
+
+/* ------------------------ reset properties ----------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    font-family:cursive;
+    overflow-x: hidden;
+}
+h1{
+    color: #4B83B6;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* -------------------------- NAV ---------------------*/
+
+#icon-nav{
+    height: 50px;
+ }
+
+ /* -------------------------- HOME --------------------*/
+
+.home{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 320px;
+}
+.img-home{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+.sp-home{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    padding-top: 100px;
+    padding-left: 15px;
+    background-color: rgba(0, 128, 0, 0.3);
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 2px black;
+}
+#container-ciudades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.section-gral{
+    width: 320px;
+    padding: 20%;
+    height: 100%;
+
+   
+}
+.ciudades{
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+    border: 1px solid black;
+    box-shadow: 0 0 8px black;
+    transition: all 0.8s;
+}
+
+.ciudades:hover{
+    transform: scale(1.1);
+    transition: all 0.8s;
+}
+.mapa{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.parr-map{
+    width: 80%;
+}
+.img-mapa{
+    display: none;
+    
+}
+.img-mapa2{
+    width: 80%;
+    margin:  15px 0;
+}
+.tour{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 320px;
+    
+}
+.div-tours{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 10%;
+}
+.img-tours{
+    width: 302px;
+    height: 225px;
+    object-fit: cover;
+    box-shadow: 0 0 5px black;
+}
+.parr{
+    padding: 7px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* ------------------------- foooter ---------------------------*/
+
+.footer{
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px 10%;
+    background-color: beige;
+    
+}
+.list-footer{
+    padding: 7px 0;
+}
+.redes{
+    height: 80px;
+    padding: 15px 0;
+}
+.whatsapp{
+    transform: scale(1.3);
+}   
+
+
+
+/* ------------------------- MEDIA QUERY TABLET------------------------*/
+
+@media (min-width: 321px) and (max-width:780px){
+
+/* ------------------------- HOME -------------------------------*/
+    .home{
+    width: 780px;
+}
+
+
+/* ----------------------------- CIUDADES -------------------*/
+
+#container-ciudades{
+    
+    width: 780px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.section-gral{
+    display: grid;
+    grid-template-areas: 
+                        "title title"
+                        "ciu1 ciu2"
+                        "ciu3 ciu4"
+                        "ciu5 ciu6";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, 1fr);
+    width: 740px;
+    height: 100%;
+    gap: 30px;
+    padding: 50px;
+       
+}
+.ciudades{
+    width: 70%;
+    object-fit: cover;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+}
+.title-ciudades{
+    grid-area: title;
+}
+.biarritz{
+    grid-area: ciu1;
+}
+.saint-jean{
+    grid-area: ciu2;
+}
+.san-sebastian{
+    grid-area: ciu3;
+}
+.bayonne{
+    grid-area: ciu4;
+}
+.bilbao{
+    grid-area: ciu5;
+}
+.sj-pied-port{
+    grid-area: ciu6;
+}
+
+
+/*---------------------------------- MAPA -------------------*/
+.mapa{
+    width: 780px;
+   
+}
+.parr-map{
+    width: 80%;
+}
+.img-mapa{
+    display: block;
+    
+}
+.img-mapa2{
+    display: none;
+}
+/*----------------------------------TOURS---------------------*/
+.tour{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 780px;
+    margin-top: 50px;
+}
+.div-tours{
+    width: 40%;
+    margin: 5px 5%;
+
+}
+.enlace-tour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+}
+.img-tours{
+    width: 75%;
+   
+}
+.parr{
+    width: 75%;
+    height: 206px;
+}
+
+/*---------------------------- FOOTER---------------------*/
+.footer{
+    width: 780px;
+    justify-content: space-between;
+}
+.list-footer{
+    padding: 7px 0;
+}
+.btn{
+    display: flex;
+    gap: 45px;
+}
+.redes{
+    height: 80px;
+    padding: 15px 0;
+}
+.whatsapp{
+    transform: scale(1.3);
+}   
+}
+
